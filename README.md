@@ -24,3 +24,11 @@ Working solution gave this output:
 
 Working solution gave this output:
 ![Image of solution output](images/perfect-sequence.PNG)
+
+
+
+## Sum Of Rows
+### Given a matrix of integers. Return the sum of each row in a single dimensional array.
+
+Working solution gave this output:
+![Image of solution output](images/sum-rows.PNG)
