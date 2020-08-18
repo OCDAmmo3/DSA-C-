@@ -7,3 +7,11 @@ Data structures and algorithms to be written in C#.
 
 Working solution gave this output:
 ![Image of solution output](images/max-array-snip.PNG)
+
+
+
+## Leap Year Calculator
+### Given a year, report if it is a leap year.
+
+Working solution gave this output:
+![Image of solution output](images/leap-year.png)
