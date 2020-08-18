@@ -15,3 +15,12 @@ Working solution gave this output:
 
 Working solution gave this output:
 ![Image of solution output](images/leap-year.PNG)
+
+
+
+## Perfect Sequence
+### Given an array, check if it's a perfect sequence. A perfect sequence is when the numbers given have the same product as their sum, and there are no negative values.
+### A valid perfect sequence should return "Yes", while invalid should return "No".
+
+Working solution gave this output:
+![Image of solution output](images/perfect-sequence.PNG)
