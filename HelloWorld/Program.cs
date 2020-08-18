@@ -42,7 +42,6 @@ namespace HelloWorld
 
             Console.WriteLine(score);
             Console.ReadLine();
-            */
 
             Console.WriteLine("Give me a random year in format YYYY: ");
             string not = "It's not a leap year.";
@@ -62,6 +61,34 @@ namespace HelloWorld
             else
                 Console.WriteLine(not);
             Console.ReadLine();
+            */
+
+            int[] numsBad = new int[] { 1, 2, 3, 4, 5 };
+            int[] numsGood = new int[] { 1, 2, 3 };
+
+            static string Perfect(int[] array)
+            {
+                int product = 1;
+                int sum = 0;
+                foreach(int value in array)
+                {
+                    if (value < 0)
+                        return "No";
+                    product *= value;
+                    sum += value;
+                }
+                if(sum == product)
+                {
+                    return "Yes";
+                }
+                else
+                {
+                    return "No";
+                }
+            }
+
+            Console.WriteLine(Perfect(numsBad));
+            Console.WriteLine(Perfect(numsGood));
         }
     }
 }
