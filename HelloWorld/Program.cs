@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Reflection.Metadata.Ecma335;
 
 namespace HelloWorld
@@ -61,7 +62,6 @@ namespace HelloWorld
             else
                 Console.WriteLine(not);
             Console.ReadLine();
-            */
 
             int[] numsBad = new int[] { 1, 2, 3, 4, 5 };
             int[] numsGood = new int[] { 1, 2, 3 };
@@ -89,6 +89,50 @@ namespace HelloWorld
 
             Console.WriteLine(Perfect(numsBad));
             Console.WriteLine(Perfect(numsGood));
+            */
+
+            static void SumRows(int[,] values)
+            {
+                int val1 = values.GetLength(0);
+                int val2 = values.GetLength(1);
+                int[] result = new int[val1];
+                string answer = "";
+                for(int i = 0; i < val1; i++)
+                {
+                    int count = 0;
+                    for(int j = 0; j < val2; j++)
+                    {
+                        count += values[i, j];
+                    }
+                    result[i] = count;
+                    answer = answer == "" ? answer + count : answer + ", " + count;
+                }
+                Console.WriteLine(answer);
+                Console.ReadLine();
+            }
+
+            int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+
+            Console.WriteLine("We expect our function will take in an array of values [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15]] and return the values 15,40,65 in that order, the sums of each inner array.");
+            Console.ReadLine();
+            SumRows(myArray);
+
+            Console.WriteLine("What values would you like added together? Give us how many arrays you want. 1 to 5 please.");
+            int user1 = Int16.Parse(Console.ReadLine());
+            Console.WriteLine("And how many values in each array? This can be 1-10");
+            int user2 = Int16.Parse(Console.ReadLine());
+
+            int[,] userArray = new int[user1, user2];
+
+            for(int i = 0; i < user1; i++)
+            {
+                for(int j = 0; j < user2; j++)
+                {
+                    userArray[i, j] = (user2 * i) + j + 1;
+                }
+            }
+
+            SumRows(userArray);
         }
     }
 }
