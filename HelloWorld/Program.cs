@@ -7,6 +7,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
+            /*
             int[] ansArray = new int[5];
             string goodMsg = "Give me a random number from 1 to 10.";
             string badMsg = "That's not a number between 1 and 10.";
@@ -40,6 +41,26 @@ namespace HelloWorld
             int score = count * ansNum;
 
             Console.WriteLine(score);
+            Console.ReadLine();
+            */
+
+            Console.WriteLine("Give me a random year in format YYYY: ");
+            string not = "It's not a leap year.";
+            string yes = "It's indeed a leap year!";
+            int input = Int16.Parse(Console.ReadLine());
+            if(input % 4 == 0)
+            {
+                if(input % 100 == 0 && input % 400 != 0)
+                {
+                    Console.WriteLine(not);
+                }
+                else
+                {
+                    Console.WriteLine(yes);
+                }
+            }
+            else
+                Console.WriteLine(not);
             Console.ReadLine();
         }
     }
